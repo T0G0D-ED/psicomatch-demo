@@ -1,0 +1,265 @@
+import type { Psychologist } from '../types';
+
+export const psychologists: Psychologist[] = [
+  {
+    id: 'psy-angelica-gonzalez',
+    name: 'Ps. Angélica González',
+    initials: 'AG',
+    specialty: 'Infanto-juvenil y adultez',
+    approach: 'Enfoque Integral',
+    plainLanguageFocus:
+      'Acompañamiento cercano y respetuoso en etapas clave de la vida, sin etiquetas rígidas ni tecnicismos.',
+    targetAudience: ['Niños, niñas y adolescentes', 'Jóvenes y adultos'],
+    modalities: ['Online', 'Presencial'],
+    communes: ['Quilpué', 'Quillota'],
+    priceClp: 30000,
+    sessionMinutes: 50,
+    rating: 4.9,
+    reviewCount: 24,
+    credentials: 'Psicóloga Clínica · Registro SIS Verificado',
+    instagramHandle: '@ange.psico',
+    bioLetter:
+      'Creo en una psicología cercana, humana y libre de juicios. Trabajo desde un enfoque integral acompañando a niños, adolescentes y adultos, adaptando cada proceso a tu momento de vida y herramientas cotidianas. Atiendo de forma presencial en Quilpué y Quillota, y también online para acompañarte desde donde te sientas más cómoda/o.',
+    tags: ['infanto-juvenil', 'adultez', 'ansiedad', 'crecimiento'],
+    tagLabels: ['Infanto-Juvenil', 'Adultez', 'Enfoque Integral'],
+    reviews: [
+      {
+        id: 'rev-ag-1',
+        author: 'Camila V.',
+        communeOrMode: 'Quilpué · Presencial',
+        rating: 5,
+        comment:
+          'Desde la primera sesión me sentí escuchada sin tecnicismos ni juicios. Muy cálida y clara para explicar cada paso.',
+        dateLabel: 'Hace 2 semanas',
+      },
+      {
+        id: 'rev-ag-2',
+        author: 'Rodrigo M.',
+        communeOrMode: 'Quillota · Presencial',
+        rating: 5,
+        comment:
+          'Excelente acompañamiento para nuestro hijo adolescente. Logró generar confianza muy rápido.',
+        dateLabel: 'Hace 1 mes',
+      },
+      {
+        id: 'rev-ag-3',
+        author: 'Fernanda L.',
+        communeOrMode: 'Online',
+        rating: 5,
+        comment:
+          'Me ayudó a ordenar mi ansiedad laboral con herramientas concretas desde el primer mes.',
+        dateLabel: 'Hace 2 meses',
+      },
+    ],
+    availableSlots: [
+      { id: 'ag-1', dayLabel: 'Mar 24', timeLabel: '10:00', modality: 'Presencial', commune: 'Quilpué', available: true },
+      { id: 'ag-2', dayLabel: 'Mar 24', timeLabel: '16:30', modality: 'Online', available: true },
+      { id: 'ag-3', dayLabel: 'Mié 25', timeLabel: '11:00', modality: 'Presencial', commune: 'Quillota', available: true },
+      { id: 'ag-4', dayLabel: 'Jue 26', timeLabel: '18:00', modality: 'Online', available: true },
+      { id: 'ag-5', dayLabel: 'Vie 27', timeLabel: '15:30', modality: 'Presencial', commune: 'Quilpué', available: true },
+    ],
+  },
+  {
+    id: 'psy-matias-riquelme',
+    name: 'Ps. Matías Riquelme',
+    initials: 'MR',
+    specialty: 'Ansiedad, estrés académico y laboral',
+    approach: 'Práctico y Cognitivo-Contextual',
+    plainLanguageFocus:
+      'Espacio estructurado y amable para calmar la sobrecarga mental, dormir mejor y manejar presión diaria.',
+    targetAudience: ['Estudiantes universitarios', 'Adultos jóvenes'],
+    modalities: ['Online', 'Presencial'],
+    communes: ['Viña del Mar'],
+    priceClp: 28000,
+    sessionMinutes: 50,
+    rating: 4.8,
+    reviewCount: 19,
+    credentials: 'Psicólogo · Postítulo en Regulación del Estrés',
+    bioLetter:
+      'Muchas veces llegamos sintiendo que la cabeza no para y no sabemos qué nombre tiene eso. Mi objetivo es darte un espacio concreto, sin palabras complicadas, donde aprendamos juntos a bajar la alerta del cuerpo, organizar preocupaciones y recuperar tu descanso.',
+    tags: ['ansiedad', 'estres-academico', 'adultez'],
+    tagLabels: ['Ansiedad', 'Estrés Académico', 'Adultos'],
+    reviews: [
+      {
+        id: 'rev-mr-1',
+        author: 'Tomás G.',
+        communeOrMode: 'Viña del Mar · Presencial',
+        rating: 5,
+        comment:
+          'Me ayudó muchísimo en mi último año de universidad con las crisis de pánico antes de rendir exámenes.',
+        dateLabel: 'Hace 1 semana',
+      },
+      {
+        id: 'rev-mr-2',
+        author: 'Daniela P.',
+        communeOrMode: 'Online',
+        rating: 5,
+        comment: 'Muy aterrizado, cada sesión te deja pensando con calma y con cosas prácticas.',
+        dateLabel: 'Hace 1 mes',
+      },
+    ],
+    availableSlots: [
+      { id: 'mr-1', dayLabel: 'Mar 24', timeLabel: '12:00', modality: 'Presencial', commune: 'Viña del Mar', available: true },
+      { id: 'mr-2', dayLabel: 'Mié 25', timeLabel: '19:00', modality: 'Online', available: true },
+      { id: 'mr-3', dayLabel: 'Jue 26', timeLabel: '10:30', modality: 'Presencial', commune: 'Viña del Mar', available: true },
+      { id: 'mr-4', dayLabel: 'Vie 27', timeLabel: '17:00', modality: 'Online', available: true },
+    ],
+  },
+  {
+    id: 'psy-camila-morales',
+    name: 'Ps. Camila Morales',
+    initials: 'CM',
+    specialty: 'Vínculos, pareja y autoestima',
+    approach: 'Enfoque Relacional y Sistémico',
+    plainLanguageFocus:
+      'Acompañamiento cálido para construir límites sanos, dialogar en pareja y fortalecer la seguridad personal.',
+    targetAudience: ['Adultos', 'Parejas y familias'],
+    modalities: ['Online', 'Presencial'],
+    communes: ['Valparaíso'],
+    priceClp: 32000,
+    sessionMinutes: 50,
+    rating: 4.9,
+    reviewCount: 31,
+    credentials: 'Psicóloga Clínica · Especialista en Terapia Relacional',
+    bioLetter:
+      'Nuestras relaciones reflejan cómo nos cuidamos y cómo pedimos lo que necesitamos. Trabajo desde una mirada cercana para ayudarte a salir de dinámicas que duelen, fortalecer tu autoestima o acompañar procesos de pareja con respeto mutuo en el corazón de Valparaíso y online.',
+    tags: ['pareja-vinculos', 'crecimiento', 'adultez'],
+    tagLabels: ['Pareja y Vínculos', 'Autoestima', 'Crecimiento'],
+    reviews: [
+      {
+        id: 'rev-cm-1',
+        author: 'Paula & Javier',
+        communeOrMode: 'Valparaíso · Presencial',
+        rating: 5,
+        comment:
+          'Logramos volver a escucharnos sin reproches. Nos dio herramientas muy simples para el día a día.',
+        dateLabel: 'Hace 3 semanas',
+      },
+      {
+        id: 'rev-cm-2',
+        author: 'Ignacia R.',
+        communeOrMode: 'Online',
+        rating: 5,
+        comment: 'Súper empática, nunca me sentí juzgada al hablar de mis inseguridades.',
+        dateLabel: 'Hace 1 mes',
+      },
+    ],
+    availableSlots: [
+      { id: 'cm-1', dayLabel: 'Lun 23', timeLabel: '17:30', modality: 'Presencial', commune: 'Valparaíso', available: true },
+      { id: 'cm-2', dayLabel: 'Mié 25', timeLabel: '15:00', modality: 'Online', available: true },
+      { id: 'cm-3', dayLabel: 'Jue 26', timeLabel: '19:00', modality: 'Presencial', commune: 'Valparaíso', available: true },
+      { id: 'cm-4', dayLabel: 'Sáb 28', timeLabel: '11:00', modality: 'Online', available: true },
+    ],
+  },
+  {
+    id: 'psy-javiera-bustos',
+    name: 'Ps. Javiera Bustos',
+    initials: 'JB',
+    specialty: 'Duelo, cambios vitales y estado de ánimo',
+    approach: 'Humanista Integrativo',
+    plainLanguageFocus:
+      'Un refugio tranquilo para atravesar pérdidas, agotamiento emocional o momentos en que todo pesa más.',
+    targetAudience: ['Adultos', 'Jóvenes'],
+    modalities: ['Online', 'Presencial'],
+    communes: ['Viña del Mar', 'Quilpué'],
+    priceClp: 26000,
+    sessionMinutes: 50,
+    rating: 4.9,
+    reviewCount: 15,
+    credentials: 'Psicóloga · Diplomada en Acompañamiento en Duelo',
+    bioLetter:
+      'Atravesar un cambio importante, un duelo o sentir desánimo sostenido no requiere apresurarse ni "estar bien a la fuerza". Te ofrezco un acompañamiento pausado y humano para volver a habitar tu historia con calma.',
+    tags: ['duelo-animo', 'adultez', 'crecimiento'],
+    tagLabels: ['Duelo y Cambios', 'Ánimo', 'Humanista'],
+    reviews: [
+      {
+        id: 'rev-jb-1',
+        author: 'Marcela S.',
+        communeOrMode: 'Quilpué · Presencial',
+        rating: 5,
+        comment:
+          'Su calma transmite mucha paz. Me acompañó en la pérdida de mi mamá con enorme delicadeza.',
+        dateLabel: 'Hace 2 semanas',
+      },
+    ],
+    availableSlots: [
+      { id: 'jb-1', dayLabel: 'Mar 24', timeLabel: '11:30', modality: 'Presencial', commune: 'Quilpué', available: true },
+      { id: 'jb-2', dayLabel: 'Mié 25', timeLabel: '18:00', modality: 'Online', available: true },
+      { id: 'jb-3', dayLabel: 'Vie 27', timeLabel: '10:00', modality: 'Presencial', commune: 'Viña del Mar', available: true },
+    ],
+  },
+  {
+    id: 'psy-sebastian-lagos',
+    name: 'Ps. Sebastián Lagos',
+    initials: 'SL',
+    specialty: 'Jóvenes, estudiantes y regulación emocional',
+    approach: 'Terapia Breve Orientada a Soluciones',
+    plainLanguageFocus:
+      'Conversación directa y cercana para estudiantes y jóvenes que buscan claridad rápida sin rodeos.',
+    targetAudience: ['Estudiantes', 'Jóvenes y adultos'],
+    modalities: ['Online', 'Presencial'],
+    communes: ['Valparaíso'],
+    priceClp: 24000,
+    sessionMinutes: 50,
+    rating: 4.7,
+    reviewCount: 12,
+    credentials: 'Psicólogo · Universidad de Valparaíso (Registro SIS)',
+    bioLetter:
+      'Sé lo difícil que es dar el primer paso cuando estás estudiando o empezando a trabajar y el presupuesto es acotado. Conversamos en tu mismo idioma para destrabar bloqueos, manejar la ansiedad académica y tomar decisiones con tranquilidad.',
+    tags: ['estres-academico', 'ansiedad', 'crecimiento', 'adultez'],
+    tagLabels: ['Estudiantes', 'Arancel Accesible', 'Online · Valpo'],
+    reviews: [
+      {
+        id: 'rev-sl-1',
+        author: 'Nicolás A.',
+        communeOrMode: 'Online',
+        rating: 5,
+        comment:
+          'Primera vez que voy al psicólogo y no me sentí en una consulta rígida. Súper recomendado.',
+        dateLabel: 'Hace 3 semanas',
+      },
+    ],
+    availableSlots: [
+      { id: 'sl-1', dayLabel: 'Lun 23', timeLabel: '19:30', modality: 'Online', available: true },
+      { id: 'sl-2', dayLabel: 'Mar 24', timeLabel: '15:00', modality: 'Presencial', commune: 'Valparaíso', available: true },
+      { id: 'sl-3', dayLabel: 'Jue 26', timeLabel: '17:00', modality: 'Online', available: true },
+    ],
+  },
+  {
+    id: 'psy-valentina-soto',
+    name: 'Ps. Valentina Soto',
+    initials: 'VS',
+    specialty: 'Infanto-juvenil y crianza respetuosa',
+    approach: 'Integral Familiar y del Desarrollo',
+    plainLanguageFocus:
+      'Apoyo lúdico y respetuoso para niños y adolescentes, junto con orientación práctica para madres, padres y cuidadores.',
+    targetAudience: ['Niños y niñas', 'Adolescentes', 'Madres, padres y cuidadores'],
+    modalities: ['Online', 'Presencial'],
+    communes: ['Quillota', 'Viña del Mar'],
+    priceClp: 34000,
+    sessionMinutes: 50,
+    rating: 5.0,
+    reviewCount: 28,
+    credentials: 'Psicóloga Infanto-Juvenil · Magíster en Desarrollo Infantil',
+    bioLetter:
+      'Cuando un niño o adolescente lo está pasando mal, toda la familia busca respuestas sin saber a quién acudir. Trabajo desde el juego, el vínculo seguro y orientaciones claras para que en casa se sientan acompañados sin culpas.',
+    tags: ['infanto-juvenil', 'pareja-vinculos', 'ansiedad'],
+    tagLabels: ['Infanto-Juvenil', 'Crianza', 'Quillota · Viña'],
+    reviews: [
+      {
+        id: 'rev-vs-1',
+        author: 'Carolina H.',
+        communeOrMode: 'Quillota · Presencial',
+        rating: 5,
+        comment:
+          'Valentina transformó nuestra dinámica familiar. Mi hija espera feliz cada sesión.',
+        dateLabel: 'Hace 1 semana',
+      },
+    ],
+    availableSlots: [
+      { id: 'vs-1', dayLabel: 'Mar 24', timeLabel: '16:00', modality: 'Presencial', commune: 'Quillota', available: true },
+      { id: 'vs-2', dayLabel: 'Mié 25', timeLabel: '10:30', modality: 'Presencial', commune: 'Viña del Mar', available: true },
+      { id: 'vs-3', dayLabel: 'Vie 27', timeLabel: '18:30', modality: 'Online', available: true },
+    ],
+  },
+];
