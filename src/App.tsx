@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { AppProvider, useApp } from './context/AppContext';
 import { PsychologistB2BView } from './components/b2b/PsychologistB2BView';
 import { BookingsDrawer } from './components/booking/BookingsDrawer';
@@ -46,6 +47,7 @@ export function App() {
   return (
     <AppProvider>
       <MainContent />
+      <Analytics />
     </AppProvider>
   );
 }
