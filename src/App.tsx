@@ -8,6 +8,7 @@ import { HeroSection } from './components/landing/HeroSection';
 import { MoodOrientationWidget } from './components/landing/MoodOrientationWidget';
 import { ValuePillars } from './components/landing/ValuePillars';
 import { Footer } from './components/layout/Footer';
+import { MobileBottomNav } from './components/layout/MobileBottomNav';
 import { Navbar } from './components/layout/Navbar';
 import { MatchWizard } from './components/match/MatchWizard';
 
@@ -33,6 +34,7 @@ function MainContent() {
 
       <Footer />
 
+      <MobileBottomNav />
       <PsychologistModal />
       <BookingsDrawer />
       <ChatbotWidget />

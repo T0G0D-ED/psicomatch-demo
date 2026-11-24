@@ -40,12 +40,12 @@ export function MatchWizard() {
   };
 
   return (
-    <section className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
-      <div className="mb-4 flex items-center justify-between">
+    <section className="mx-auto max-w-3xl px-3 py-4 sm:px-6 sm:py-12">
+      <div className="mb-3 sm:mb-4 flex flex-wrap items-center justify-between gap-2">
         <button
           type="button"
           onClick={() => navigateTo('landing')}
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-secondary hover:text-ink transition-colors"
+          className="inline-flex min-h-[40px] items-center gap-1.5 text-sm font-semibold text-ink-secondary hover:text-ink transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
           <span>Volver al inicio</span>
@@ -53,18 +53,18 @@ export function MatchWizard() {
         <button
           type="button"
           onClick={() => navigateTo('directory')}
-          className="text-sm font-semibold text-primary hover:text-primary-hover transition-colors"
+          className="inline-flex min-h-[40px] items-center text-sm font-semibold text-primary hover:text-primary-hover transition-colors"
         >
-          Saltar e ir al directorio →
+          Ir al directorio →
         </button>
       </div>
 
-      <div className="rounded-[28px] border border-border-soft bg-surface p-6 sm:p-10 shadow-floating space-y-7 animate-fade-up">
+      <div className="rounded-2xl sm:rounded-[28px] border border-border-soft bg-surface p-5 sm:p-10 shadow-floating space-y-5 sm:space-y-7 animate-fade-up">
         {/* Progress Header */}
-        <div className="space-y-3">
-          <div className="flex items-center justify-between gap-4">
-            <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-primary-hover">
-              <Sparkles className="h-3.5 w-3.5" />
+        <div className="space-y-2.5 sm:space-y-3">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.08em] text-primary-hover">
+              <Sparkles className="h-3.5 w-3.5 shrink-0" />
               Orientación en lenguaje simple
             </span>
             <span className="text-xs font-semibold text-ink-secondary">
@@ -80,7 +80,7 @@ export function MatchWizard() {
         </div>
 
         {/* Question */}
-        <div className="space-y-2">
+        <div className="space-y-1.5 sm:space-y-2">
           <h1 className="font-serif text-2xl sm:text-3xl font-bold text-ink leading-tight">
             {currentQuestion.question}
           </h1>
@@ -90,7 +90,7 @@ export function MatchWizard() {
         </div>
 
         {/* Options */}
-        <div className="space-y-3" role="radiogroup" aria-label={currentQuestion.question}>
+        <div className="space-y-2.5 sm:space-y-3" role="radiogroup" aria-label={currentQuestion.question}>
           {currentQuestion.options.map((option) => {
             const isSelected = currentAnswer?.id === option.id;
             return (
@@ -100,7 +100,7 @@ export function MatchWizard() {
                 role="radio"
                 aria-checked={isSelected}
                 onClick={() => handleSelectOption(option)}
-                className={`w-full rounded-2xl p-4 sm:p-5 text-left transition-all flex items-start gap-4 ${
+                className={`w-full rounded-2xl p-4 sm:p-5 text-left transition-all flex items-start gap-3 sm:gap-4 ${
                   isSelected
                     ? 'bg-sage border-2 border-calm shadow-xs'
                     : 'bg-canvas border border-border-soft hover:bg-subtle/70'
@@ -115,7 +115,7 @@ export function MatchWizard() {
                 >
                   {isSelected && <Check className="h-3 w-3 stroke-[3]" />}
                 </span>
-                <div className="space-y-1">
+                <div className="space-y-0.5 sm:space-y-1 min-w-0">
                   <p className="text-sm sm:text-base font-semibold text-ink">
                     {option.label}
                   </p>
@@ -129,26 +129,32 @@ export function MatchWizard() {
         </div>
 
         {/* Actions */}
-        <div className="flex items-center justify-between gap-3 pt-2">
-          <Button variant="ghost" size="lg" onClick={handleBack}>
-            <ArrowLeft className="h-4 w-4" />
+        <div className="grid grid-cols-12 gap-2.5 pt-2 sm:flex sm:items-center sm:justify-between">
+          <Button
+            variant="ghost"
+            size="lg"
+            className="col-span-5 px-3 sm:w-auto sm:px-6"
+            onClick={handleBack}
+          >
+            <ArrowLeft className="h-4 w-4 shrink-0" />
             <span>{stepIndex === 0 ? 'Inicio' : 'Anterior'}</span>
           </Button>
           <Button
             variant="primary"
             size="lg"
+            className="col-span-7 px-4 sm:w-auto sm:px-7"
             disabled={!currentAnswer}
             onClick={handleNext}
           >
             <span>
-              {isLastStep ? 'Ver especialistas compatibles' : 'Continuar'}
+              {isLastStep ? 'Ver compatibles' : 'Continuar'}
             </span>
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4 shrink-0" />
           </Button>
         </div>
 
         {/* Non-diagnostic Disclaimer */}
-        <div className="flex items-start gap-2.5 rounded-xl bg-subtle/80 px-4 py-3 text-xs text-ink-secondary">
+        <div className="flex items-start gap-2.5 rounded-xl bg-subtle/80 px-3.5 py-3 text-xs text-ink-secondary">
           <Info className="mt-0.5 h-4 w-4 shrink-0 text-calm" />
           <p>
             Esta orientación te ayuda a elegir profesional según tus preferencias; no constituye un diagnóstico clínico ni reemplaza atención médica de urgencia.

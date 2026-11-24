@@ -19,16 +19,16 @@ export function PsychologistCard({ item }: { item: ScoredPsychologist }) {
   ).length;
 
   return (
-    <article className="flex h-full flex-col justify-between rounded-2xl border border-border-soft bg-surface p-6 shadow-card transition-all hover:border-border-warm">
-      <div className="space-y-4">
+    <article className="min-w-0 flex h-full flex-col justify-between rounded-2xl border border-border-soft bg-surface p-4 sm:p-6 shadow-card transition-all hover:border-border-warm">
+      <div className="space-y-3.5 sm:space-y-4">
         {/* Header */}
-        <div className="flex items-start justify-between gap-3">
+        <div className="flex items-start justify-between gap-2.5">
           <div className="flex items-center gap-3 min-w-0">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sage-strong text-sm font-bold text-ink">
+            <span className="flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full bg-sage-strong text-sm font-bold text-ink">
               {psychologist.initials}
             </span>
             <div className="min-w-0">
-              <h3 className="text-lg font-semibold text-ink leading-snug">
+              <h3 className="text-base sm:text-lg font-semibold text-ink leading-snug">
                 {psychologist.name}
               </h3>
               <p className="text-xs text-ink-secondary leading-snug">
@@ -38,7 +38,7 @@ export function PsychologistCard({ item }: { item: ScoredPsychologist }) {
           </div>
 
           {matchScore !== null && (
-            <Badge tone="match" className="shrink-0">
+            <Badge tone="match" nowrap className="shrink-0">
               <Sparkles className="h-3 w-3" />
               {matchScore}% Match
             </Badge>
@@ -70,7 +70,7 @@ export function PsychologistCard({ item }: { item: ScoredPsychologist }) {
       </div>
 
       {/* Bottom Metadata + Price + Actions */}
-      <div className="mt-5 space-y-4">
+      <div className="mt-4 sm:mt-5 space-y-3.5 sm:space-y-4">
         <div className="flex items-center justify-between gap-2 text-xs text-ink-secondary">
           <span className="inline-flex items-center gap-1.5 min-w-0">
             <MapPin className="h-3.5 w-3.5 shrink-0 text-calm" />
@@ -82,19 +82,20 @@ export function PsychologistCard({ item }: { item: ScoredPsychologist }) {
           </span>
         </div>
 
-        <div className="border-t border-border-soft pt-4 flex items-center justify-between gap-2">
-          <div className="min-w-0">
-            <p className="text-base sm:text-lg font-bold text-ink whitespace-nowrap">
+        <div className="border-t border-border-soft pt-3.5 sm:pt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+          <div className="flex items-baseline justify-between sm:block min-w-0">
+            <p className="text-lg font-bold text-ink whitespace-nowrap">
               {formatCLP(psychologist.priceClp)}
             </p>
             <p className="text-[11px] font-medium text-primary-hover">
               Sin suscripciones · {availableCount} horas libres
             </p>
           </div>
-          <div className="flex items-center gap-1.5 shrink-0">
+          <div className="grid grid-cols-2 gap-2 sm:flex sm:items-center sm:gap-1.5 sm:shrink-0">
             <Button
               variant="secondary"
               size="sm"
+              className="w-full sm:w-auto"
               onClick={() => openPsychologist(psychologist.id, 'profile')}
             >
               Ver perfil
@@ -102,6 +103,7 @@ export function PsychologistCard({ item }: { item: ScoredPsychologist }) {
             <Button
               variant="primary"
               size="sm"
+              className="w-full sm:w-auto"
               onClick={() => openPsychologist(psychologist.id, 'booking')}
             >
               Agendar

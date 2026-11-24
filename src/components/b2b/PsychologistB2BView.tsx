@@ -75,31 +75,31 @@ export function PsychologistB2BView() {
   };
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8 space-y-8">
-      <div className="flex items-center justify-between">
+    <section className="mx-auto max-w-6xl px-3 py-5 sm:px-6 sm:py-8 lg:px-8 space-y-5 sm:space-y-8">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <button
           type="button"
           onClick={() => navigateTo('landing')}
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-secondary hover:text-ink transition-colors"
+          className="inline-flex min-h-[40px] items-center gap-1.5 text-sm font-semibold text-ink-secondary hover:text-ink transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
-          <span>Volver a vista de pacientes</span>
+          <span>Volver a pacientes</span>
         </button>
         {b2bApplications.length > 0 && (
           <Badge tone="sage">
-            {b2bApplications.length} postulación{b2bApplications.length === 1 ? '' : 'es'} simulada{b2bApplications.length === 1 ? '' : 's'} guardada{b2bApplications.length === 1 ? '' : 's'}
+            {b2bApplications.length} postulación{b2bApplications.length === 1 ? '' : 'es'} simulada{b2bApplications.length === 1 ? '' : 's'}
           </Badge>
         )}
       </div>
 
       {/* Main Dark Botanical B2B Value Prop Card */}
-      <div className="overflow-hidden rounded-[28px] border border-border-soft bg-surface shadow-card">
-        <div className="bg-dark px-6 py-8 sm:px-10 sm:py-10 text-white space-y-6">
-          <div className="max-w-3xl space-y-2.5">
-            <p className="text-xs font-semibold uppercase tracking-[0.08em] text-sand">
+      <div className="overflow-hidden rounded-2xl sm:rounded-[28px] border border-border-soft bg-surface shadow-card">
+        <div className="bg-dark px-4 py-6 sm:px-10 sm:py-10 text-white space-y-5 sm:space-y-6">
+          <div className="max-w-3xl space-y-2">
+            <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.08em] text-sand">
               Propuesta B2B · Región de Valparaíso
             </p>
-            <h1 className="font-serif text-3xl sm:text-4xl font-bold leading-tight">
+            <h1 className="font-serif text-2xl sm:text-4xl font-bold leading-tight">
               Visibilidad ética y pacientes perfilados, sin costos fijos.
             </h1>
             <p className="text-sm sm:text-base text-ink-muted leading-relaxed">
@@ -107,33 +107,33 @@ export function PsychologistB2BView() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl bg-sage p-5 text-ink">
-              <p className="font-serif text-3xl font-bold">$0 CLP</p>
-              <p className="mt-1 text-xs font-medium text-ink-secondary">
-                Costo fijo mensual o suscripción obligatoria
+          <div className="grid grid-cols-3 gap-2 sm:gap-4">
+            <div className="rounded-xl sm:rounded-2xl bg-sage p-3 sm:p-5 text-ink">
+              <p className="font-serif text-xl sm:text-3xl font-bold">$0 CLP</p>
+              <p className="mt-1 text-[11px] sm:text-xs font-medium text-ink-secondary leading-snug">
+                Costo fijo mensual
               </p>
             </div>
-            <div className="rounded-2xl bg-sage p-5 text-ink">
-              <p className="font-serif text-3xl font-bold">7%</p>
-              <p className="mt-1 text-xs font-medium text-ink-secondary">
-                Comisión solo por sesión agendada y efectiva
+            <div className="rounded-xl sm:rounded-2xl bg-sage p-3 sm:p-5 text-ink">
+              <p className="font-serif text-xl sm:text-3xl font-bold">7%</p>
+              <p className="mt-1 text-[11px] sm:text-xs font-medium text-ink-secondary leading-snug">
+                Solo por sesión efectiva
               </p>
             </div>
-            <div className="rounded-2xl bg-sage p-5 text-ink">
-              <p className="font-serif text-3xl font-bold">8–12</p>
-              <p className="mt-1 text-xs font-medium text-ink-secondary">
-                Sesiones promedio por proceso con afinidad previa
+            <div className="rounded-xl sm:rounded-2xl bg-sage p-3 sm:p-5 text-ink">
+              <p className="font-serif text-xl sm:text-3xl font-bold">8–12</p>
+              <p className="mt-1 text-[11px] sm:text-xs font-medium text-ink-secondary leading-snug">
+                Sesiones promedio
               </p>
             </div>
           </div>
         </div>
 
         {/* Lower Split: Transparency Calculator + Onboarding Form */}
-        <div className="grid gap-8 p-6 sm:p-10 lg:grid-cols-12">
+        <div className="grid gap-6 sm:gap-8 p-4 sm:p-10 lg:grid-cols-12">
           {/* Left: 7% Calculator & Ethical Benefits */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="rounded-2xl border border-border-soft bg-canvas p-5 space-y-4">
+          <div className="min-w-0 lg:col-span-5 space-y-5 sm:space-y-6">
+            <div className="rounded-2xl border border-border-soft bg-canvas p-4 sm:p-5 space-y-4">
               <div className="flex items-center gap-2 text-sm font-semibold text-ink">
                 <Calculator className="h-4 w-4 text-calm" />
                 <span>Simulador transparente (7%)</span>
@@ -154,11 +154,11 @@ export function PsychologistB2BView() {
                   step={2000}
                   value={calcFee}
                   onChange={(e) => setCalcFee(Number(e.target.value))}
-                  className="w-full accent-calm"
+                  className="h-2 w-full accent-calm cursor-pointer"
                 />
               </div>
 
-              <div className="space-y-2 rounded-xl bg-surface p-4 border border-border-soft text-sm">
+              <div className="space-y-2 rounded-xl bg-surface p-3.5 sm:p-4 border border-border-soft text-sm">
                 <div className="flex justify-between">
                   <span className="text-ink-secondary">Tú recibes (93%)</span>
                   <strong className="text-calm">{formatCLP(psychologistReceives)}</strong>
@@ -174,7 +174,7 @@ export function PsychologistB2BView() {
               </div>
             </div>
 
-            <div className="space-y-3 text-sm text-ink-secondary">
+            <div className="space-y-3 text-xs sm:text-sm text-ink-secondary">
               <div className="flex items-start gap-2.5">
                 <Users className="mt-0.5 h-4 w-4 shrink-0 text-calm" />
                 <span>
@@ -197,18 +197,18 @@ export function PsychologistB2BView() {
           </div>
 
           {/* Right: Pioneer Application Form */}
-          <div className="lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             {submittedApp ? (
-              <div className="rounded-2xl border border-calm/30 bg-sage p-6 sm:p-8 space-y-4 animate-fade-up">
+              <div className="rounded-2xl border border-calm/30 bg-sage p-5 sm:p-8 space-y-4 animate-fade-up">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-calm text-white">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-calm text-white">
                     <CheckCircle2 className="h-6 w-6" />
                   </span>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-calm">
                       Postulación simulada recibida
                     </p>
-                    <h2 className="font-serif text-2xl font-bold text-ink">
+                    <h2 className="font-serif text-xl sm:text-2xl font-bold text-ink">
                       ¡Gracias por sumarte, {submittedApp.fullName}!
                     </h2>
                   </div>
@@ -229,11 +229,19 @@ export function PsychologistB2BView() {
                     {submittedApp.communes.length > 0 ? submittedApp.communes.join(', ') : 'Solo Online'}
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-3 pt-2">
-                  <Button variant="primary" onClick={() => setSubmittedApp(null)}>
+                <div className="flex flex-col sm:flex-row gap-2.5 pt-2">
+                  <Button
+                    variant="primary"
+                    className="w-full sm:w-auto"
+                    onClick={() => setSubmittedApp(null)}
+                  >
                     Enviar otra postulación demo
                   </Button>
-                  <Button variant="secondary" onClick={() => navigateTo('directory')}>
+                  <Button
+                    variant="secondary"
+                    className="w-full sm:w-auto"
+                    onClick={() => navigateTo('directory')}
+                  >
                     Ver directorio público
                   </Button>
                 </div>
@@ -241,7 +249,7 @@ export function PsychologistB2BView() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <h2 className="font-serif text-2xl font-semibold text-ink">
+                  <h2 className="font-serif text-xl sm:text-2xl font-semibold text-ink">
                     Postula como especialista pionero
                   </h2>
                   <p className="text-xs text-ink-secondary mt-0.5">
@@ -249,7 +257,7 @@ export function PsychologistB2BView() {
                   </p>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-3.5 sm:gap-4 sm:grid-cols-2">
                   <div className="space-y-1.5">
                     <label htmlFor="b2b-name" className="text-xs font-semibold text-ink">
                       Nombre completo
@@ -260,7 +268,7 @@ export function PsychologistB2BView() {
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="Ej. Ps. Angélica González"
-                      className="w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none"
+                      className="min-h-[44px] w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-base sm:text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -273,12 +281,12 @@ export function PsychologistB2BView() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="angelica@ejemplo.cl"
-                      className="w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none"
+                      className="min-h-[44px] w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-base sm:text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none"
                     />
                   </div>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-3.5 sm:gap-4 sm:grid-cols-2">
                   <div className="space-y-1.5">
                     <label htmlFor="b2b-sis" className="text-xs font-semibold text-ink">
                       N° Registro SIS
@@ -289,7 +297,7 @@ export function PsychologistB2BView() {
                       value={registrationNumber}
                       onChange={(e) => setRegistrationNumber(e.target.value)}
                       placeholder="Ej. SIS 489120"
-                      className="w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none"
+                      className="min-h-[44px] w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-base sm:text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -302,12 +310,12 @@ export function PsychologistB2BView() {
                       value={university}
                       onChange={(e) => setUniversity(e.target.value)}
                       placeholder="Ej. UNAB / UV / PUCV"
-                      className="w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none"
+                      className="min-h-[44px] w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-base sm:text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none"
                     />
                   </div>
                 </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-3.5 sm:gap-4 sm:grid-cols-2">
                   <div className="space-y-1.5">
                     <p className="text-xs font-semibold text-ink">Modalidad de atención</p>
                     <div className="flex gap-2">
@@ -318,7 +326,7 @@ export function PsychologistB2BView() {
                             key={m}
                             type="button"
                             onClick={() => toggleModality(m)}
-                            className={`flex-1 rounded-xl border px-3 py-2 text-xs font-semibold transition-colors ${
+                            className={`min-h-[44px] flex-1 rounded-xl border px-3 py-2 text-xs font-semibold transition-colors ${
                               active
                                 ? 'border-calm bg-sage text-ink'
                                 : 'border-border-soft bg-canvas text-ink-secondary'
@@ -342,7 +350,7 @@ export function PsychologistB2BView() {
                       step={1000}
                       value={suggestedPriceClp}
                       onChange={(e) => setSuggestedPriceClp(e.target.value)}
-                      className="w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2 text-sm text-ink focus:border-calm focus:outline-none"
+                      className="min-h-[44px] w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2 text-base sm:text-sm text-ink focus:border-calm focus:outline-none"
                     />
                   </div>
                 </div>
@@ -359,7 +367,7 @@ export function PsychologistB2BView() {
                           key={com}
                           type="button"
                           onClick={() => toggleCommune(com)}
-                          className={`rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors ${
+                          className={`min-h-[38px] rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors ${
                             active
                               ? 'border-calm bg-calm text-white'
                               : 'border-border-soft bg-canvas text-ink-secondary hover:bg-subtle'
@@ -382,7 +390,7 @@ export function PsychologistB2BView() {
                     value={plainFocus}
                     onChange={(e) => setPlainFocus(e.target.value)}
                     placeholder="Ej. Acompaño a jóvenes y adultos con ansiedad o sobrecarga, entregando herramientas prácticas desde la escucha cercana."
-                    className="w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none resize-none"
+                    className="w-full rounded-xl border border-border-soft bg-canvas px-3.5 py-2.5 text-base sm:text-sm text-ink placeholder:text-ink-muted focus:border-calm focus:outline-none resize-none"
                   />
                 </div>
 
@@ -396,7 +404,7 @@ export function PsychologistB2BView() {
                   <span className="text-xs text-ink-secondary">
                     Sin pujas publicitarias · Validación ética de título
                   </span>
-                  <Button type="submit" variant="primary" size="lg">
+                  <Button type="submit" variant="primary" size="lg" className="w-full sm:w-auto">
                     Enviar postulación simulada
                   </Button>
                 </div>

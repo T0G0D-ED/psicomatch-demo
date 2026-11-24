@@ -5,8 +5,8 @@ export function Footer() {
   const { navigateTo } = useApp();
 
   return (
-    <footer className="mt-16 bg-dark text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="mt-10 md:mt-16 bg-dark text-white">
+      <div className="mx-auto max-w-7xl px-4 py-8 pb-24 sm:px-6 md:py-12 md:pb-12 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           {/* Brand */}
           <div className="space-y-3">

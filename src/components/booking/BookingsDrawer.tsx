@@ -21,21 +21,21 @@ export function BookingsDrawer() {
       title="Mis reservas simuladas"
       maxWidthClass="max-w-2xl"
     >
-      <div className="p-6 sm:p-8 space-y-6">
+      <div className="p-4 sm:p-8 space-y-5 sm:space-y-6">
         <div className="space-y-1 pr-10">
-          <p className="text-xs font-semibold uppercase tracking-wider text-primary-hover">
+          <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-primary-hover">
             Historial local de la demo
           </p>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-ink">
             Mis reservas simuladas ({bookings.length})
           </h2>
-          <p className="text-sm text-ink-secondary">
+          <p className="text-xs sm:text-sm text-ink-secondary">
             Guardadas localmente en tu navegador. Puedes cancelar cualquiera para liberar el horario.
           </p>
         </div>
 
         {bookings.length === 0 ? (
-          <div className="rounded-2xl border border-border-soft bg-canvas p-8 text-center space-y-4">
+          <div className="rounded-2xl border border-border-soft bg-canvas p-6 sm:p-8 text-center space-y-4">
             <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-sage text-calm">
               <CalendarCheck className="h-6 w-6" />
             </span>
@@ -48,6 +48,7 @@ export function BookingsDrawer() {
             <Button
               variant="primary"
               size="md"
+              className="w-full sm:w-auto"
               onClick={() => {
                 setIsBookingsDrawerOpen(false);
                 navigateTo('directory');
@@ -65,8 +66,8 @@ export function BookingsDrawer() {
               >
                 <div className="space-y-1.5">
                   <div className="flex flex-wrap items-center gap-2">
-                    <Badge tone="match">{booking.code}</Badge>
-                    <Badge tone="terracotta">Sin suscripciones</Badge>
+                    <Badge tone="match" nowrap>{booking.code}</Badge>
+                    <Badge tone="terracotta" nowrap>Sin suscripciones</Badge>
                   </div>
                   <h3 className="text-base font-semibold text-ink">
                     {booking.psychologistName}
@@ -76,9 +77,9 @@ export function BookingsDrawer() {
                   </p>
                   <p className="inline-flex items-center gap-1 text-xs font-medium text-calm">
                     {booking.modality === 'Online' ? (
-                      <Video className="h-3.5 w-3.5" />
+                      <Video className="h-3.5 w-3.5 shrink-0" />
                     ) : (
-                      <MapPin className="h-3.5 w-3.5" />
+                      <MapPin className="h-3.5 w-3.5 shrink-0" />
                     )}
                     <span>
                       {booking.modality}
@@ -91,10 +92,10 @@ export function BookingsDrawer() {
                   variant="ghost"
                   size="sm"
                   onClick={() => cancelBooking(booking.id)}
-                  className="self-start sm:self-center text-primary-hover hover:bg-accent-soft"
+                  className="w-full sm:w-auto text-primary-hover bg-accent-soft/60 sm:bg-transparent hover:bg-accent-soft"
                 >
-                  <Trash2 className="h-4 w-4" />
-                  <span>Cancelar</span>
+                  <Trash2 className="h-4 w-4 shrink-0" />
+                  <span>Cancelar reserva</span>
                 </Button>
               </div>
             ))}

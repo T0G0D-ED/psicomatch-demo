@@ -27,13 +27,13 @@ export function ValuePillars() {
   ];
 
   return (
-    <section className="mx-auto max-w-7xl px-4 pt-10 space-y-10 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-7xl px-3 pt-6 space-y-6 sm:px-6 sm:pt-10 sm:space-y-10 lg:px-8">
       {/* 3 Pillars */}
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
         {pillars.map(({ step, icon: Icon, title, desc }) => (
           <div
             key={step}
-            className="rounded-2xl border border-border-soft bg-surface p-6 shadow-card space-y-3"
+            className="rounded-2xl border border-border-soft bg-surface p-5 sm:p-6 shadow-card space-y-2.5 sm:space-y-3"
           >
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-primary-hover">
@@ -43,20 +43,20 @@ export function ValuePillars() {
                 <Icon className="h-4 w-4" />
               </span>
             </div>
-            <h3 className="text-lg font-semibold text-ink">{title}</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-ink">{title}</h3>
             <p className="text-sm leading-relaxed text-ink-secondary">{desc}</p>
           </div>
         ))}
       </div>
 
       {/* B2B Callout Strip */}
-      <div className="rounded-[28px] bg-dark px-6 py-8 sm:px-10 sm:py-10 text-white">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+      <div className="rounded-2xl sm:rounded-[28px] bg-dark px-5 py-6 sm:px-10 sm:py-10 text-white">
+        <div className="flex flex-col gap-5 sm:gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.08em] text-sand">
+            <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.08em] text-sand">
               Para psicólogos independientes y recién egresados
             </p>
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold leading-snug">
               Pacientes perfilados, $0 costo fijo y solo 7% por sesión efectiva.
             </h3>
             <p className="text-sm text-ink-muted leading-relaxed">
@@ -64,9 +64,14 @@ export function ValuePillars() {
             </p>
           </div>
           <div className="shrink-0">
-            <Button variant="primary" size="lg" onClick={() => navigateTo('b2b')}>
+            <Button
+              variant="primary"
+              size="lg"
+              className="w-full sm:w-auto"
+              onClick={() => navigateTo('b2b')}
+            >
               <span>Soy Psicólogo · Postular</span>
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 shrink-0" />
             </Button>
           </div>
         </div>
